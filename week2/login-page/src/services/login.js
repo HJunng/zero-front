@@ -1,3 +1,5 @@
+import axios from 'axios';
+
 const userInfo = [
   {
     id: 'im',
@@ -24,4 +26,9 @@ export const loginUser = (user) => {
   else {
     return '로그인 실패';
   }
+}
+
+export const testAPI = async () => {
+  const data = await axios.get('http://localhost:3000/');
+  console.log(data);
 }
